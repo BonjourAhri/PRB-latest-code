@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/resources.css" />
+  <link rel="stylesheet" href="/assets/css/semantic.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <script src="./assets/js/common.js"></script>
+  <title>New resource</title>
+</head>
+
+<body>
+  <!-- Image baner -->
+  <div class="ui center aligned header bg-gray">
+    <div class="ui small images">
+      <img class="ui image" src="../assets/images/banner-1.png" alt="banner-1" height="130px" />
+      <img class="ui image" src="../assets/images/banner-2.png" alt="banner-2" height="130px" />
+      <img class="ui image" src="../assets/images/banner-3.png" alt="banner-3" height="130px" />
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="ui main menu sticky">
+    <div class="ui container">
+      <div class="header item">
+        AMAS
+      </div>
+      <a id="home-menu" class="item" href="./home.html">Home</a>
+      <a id="resource-menu" class="item active" href="./resource-list.html">Resources</a>
+      <a id="users-menu" class="item " href="./user-list.html">Users</a>
+      <a id="about-menu" class="item" href="./about.html">About Us</a>
+      <a href="#" class="ui right floated dropdown item" tabindex="0">
+        <div id="user-name-menu">Dropdown</div> <i class="dropdown icon"></i>
+        <div class="menu" tabindex="-1">
+          <div class="item" id="edit-button">Edit profile</div>
+          <div class="item" id="logout-button">Logout</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="ui container content" id="content">
+    <h2 id="page-title" class="ui header teal">New resource</h2>
+    <div class="ui divider"></div>
+
+    <form id="resource-new-form" class="ui form">
+      <!-- Actions -->
+      <div class="ui secondary menu">
+        <div class="right menu">
+          <div class="item">
+            <div class="ui buttons">
+              <div class="ui teal submit button">Submit</div>
+              <a class="ui button" href="resource-list.html">
+                Cancel
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main -->
+      <img class="ui centered medium bordered image" id="resource-image" src="./assets/images/banner-1.png" />
+
+      <div class="required field">
+        <label for="location">Location</label>
+        <input id="location" type="text" name="location" placeholder="Location" required>
+      </div>
+
+      <div class="required field">
+        <label for="catalogue">Catalogue / Provenance</label>
+        <input id="catalogue" type="text" name="catalogue" placeholder="Enter catalogue" required>
+      </div>
+
+      <div class="field">
+        <label for="height">Height</label>
+        <input id="height" type="text" name="height" placeholder="Enter height">
+      </div>
+
+      <div class="field">
+        <label for="diameter">Diameter</label>
+        <input id="diameter" type="text" name="diameter" placeholder="Enter diameter">
+      </div>
+
+      <div class="field">
+        <label for="plate">Plate reference</label>
+        <input id="plate" type="text" name="plate" placeholder="Enter plate">
+      </div>
+
+      <div class="field">
+        <label for="imageUrl">Image link</label>
+        <input id="imageUrl" type="text" name="imageUrl" placeholder="Enter image URL">
+      </div>
+
+      <div class="field">
+        <label for="description">Description</label>
+        <textarea rows="5" id="description" name="description" placeholder="Enter description"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="note">Notes</label>
+        <textarea rows="2" id="note" name="note" placeholder="Enter notes"></textarea>
+      </div>
+
+      <div class="ui error message"></div>
+    </form>
+  </div>
+</body>
+
+</html>

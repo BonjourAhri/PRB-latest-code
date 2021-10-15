@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/semantic.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/users.css" />
+  <script src="./assets/js/common.js"></script>
+  <script src="./assets/js/user.js"></script>
+  <title>User details</title>
+</head>
+
+<body>
+  <!-- Image baner -->
+  <div class="ui center aligned header bg-gray">
+    <div class="ui small images">
+      <img class="ui image" src="../assets/images/banner-1.png" alt="banner-1" height="130px" />
+      <img class="ui image" src="../assets/images/banner-2.png" alt="banner-2" height="130px" />
+      <img class="ui image" src="../assets/images/banner-3.png" alt="banner-3" height="130px" />
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="ui main menu sticky">
+    <div class="ui container">
+      <div class="header item">
+        AMAS
+      </div>
+      <a id="home-menu" class="item" href="./home.html">Home</a>
+      <a id="resource-menu" class="item" href="./resource-list.html">Resources</a>
+      <a id="users-menu" class="item active" href="./user-list.html">Users</a>
+      <a id="about-menu" class="item" href="./about.html">About Us</a>
+      <a href="#" class="ui right floated dropdown item" tabindex="0">
+        <div id="user-name-menu">Dropdown</div> <i class="dropdown icon"></i>
+        <div class="menu" tabindex="-1">
+          <div class="item" id="edit-button">Edit profile</div>
+          <div class="item" id="logout-button">Logout</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="ui container content" id="content">
+    <h2 class="ui header teal">User Detail</h2>
+    <div class="ui divider"></div>
+
+    <!-- Actions -->
+    <div class="ui secondary menu">
+      <div class="right menu">
+        <div class="item">
+          <div class="ui buttons">
+            <a id="user-edit-btn" class="ui button teal" href="user-new.html">
+              Edit
+            </a>
+            <a id="user-delete-btn" class="ui button red" href="user-new.html">
+              Delete
+            </a>
+            <a class="ui button" href="user-list.html">
+              Cancel
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form id="user-details" class="ui form">
+      <div class="field">
+        <label>Full Name</label>
+        <input id="user-name" type="text" name="first-name" disabled>
+      </div>
+      <div class="field">
+        <label>Username</label>
+        <input id="user-username" type="text" name="username" disabled>
+      </div>
+      <div class="field">
+        <label>Role</label>
+        <input id="user-role" type="text" name="role" disabled>
+      </div>
+      <div class="field">
+        <label>Active</label>
+        <input id="user-active" type="text" name="active" disabled>
+      </div>
+      <div class="field">
+        <label>Updated Date</label>
+        <input id="user-updated" type="text" name="updated" disabled>
+      </div>
+    </form>
+
+    <form class="ui-form">
+      <!-- <div class="row pv-1">
+        <div class="column col-inputs">
+          <div class="column">
+            <label for="name">Full name</label>
+            <div id="user-name"></div>
+          </div>
+          <div class="column">
+            <label for="username">Username</label>
+            <div id="user-username"></div>
+          </div>
+          <div class="column">
+            <label for="role">Role</label>
+            <div id="user-role"></div>
+          </div>
+          <div class="column">
+            <label for="role">Active</label>
+            <div id="user-active"></div>
+          </div>
+        </div>
+      </div> -->
+    </form>
+  </div>
+</body>
+
+</html>

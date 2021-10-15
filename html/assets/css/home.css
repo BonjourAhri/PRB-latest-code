@@ -1,0 +1,38 @@
+.home-para {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.home-para a {
+  text-decoration: none;
+  color: blue;
+}
+
+.home-para .text {
+  flex-grow: 1;
+  line-height: 35px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.home-para img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#para1-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#para1-wrapper img {
+  width: auto;
+  height: 180px;
+  margin-right: 10px;
+}
+
+#para2-wrapper img {
+  width: auto;
+  height: 180px;
+  margin-left: 10px;
+}

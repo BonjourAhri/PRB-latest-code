@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/semantic.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/home.css" />
+  <script src="./assets/js/common.js"></script>
+  <title>Login</title>
+</head>
+
+<body>
+  <!-- Image baner -->
+  <div class="ui center aligned header bg-gray">
+    <div class="ui small images">
+      <img class="ui image" src="../assets/images/banner-1.png" alt="banner-1" height="130px" />
+      <img class="ui image" src="../assets/images/banner-2.png" alt="banner-2" height="130px" />
+      <img class="ui image" src="../assets/images/banner-3.png" alt="banner-3" height="130px" />
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="ui main menu sticky">
+    <div class="ui container">
+      <div class="header item">
+        AMAS
+      </div>
+      <a id="home-menu" class="item active" href="./home.html">Home</a>
+      <a id="resource-menu" class="item" href="./resource-list.html">Resources</a>
+      <a id="users-menu" class="item" href="./user-list.html">Users</a>
+      <a id="about-menu" class="item" href="./about.html">About Us</a>
+      <a href="#" class="ui right floated dropdown item" tabindex="0">
+        <div id="user-name-menu">Dropdown</div> <i class="dropdown icon"></i>
+        <div class="menu" tabindex="-1">
+          <div class="item" id="edit-button">Edit profile</div>
+          <div class="item" id="logout-button">Logout</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="ui main container content">
+    <div class="home-para" id="para1-wrapper">
+      <img class="home-img" src="./assets/images/banner-1.png" alt="" />
+      <div class="text">
+        South Italian is a designation for ancient <a href="#">Greek pottery</a> fabricated in
+        <a href="#">Magna Graecia</a> largely during the 4th century BC. The fact that Greek Southern Italy produced
+        its own <a href="#">red-figure pottery</a> as early as the end of the 5th century B.C. was first established
+        by Adolf Furtwaengler in 1893 (<a href="#">A.D. Trendall</a>). Prior to that this pottery had been first
+        designated as "Etruscan" and then as "Attic."
+      </div>
+    </div>
+    <div class="home-para" id="para2-wrapper">
+      <div class="text">
+        Archaeological proof that this pottery was actually being produced in South Italy first came in 1973 when a
+        workshop and kilns with misfirings and broken wares was first excavated at Metaponto, proving that the
+        <a href="#">Amykos Painter</a> was located there rather than in Athens (A.D. Trendall, p. 17).
+      </div>
+      <img class="home-img" src="./assets/images/home-2.jpeg" alt="" />
+    </div>
+  </div>
+</body>
+
+</html>

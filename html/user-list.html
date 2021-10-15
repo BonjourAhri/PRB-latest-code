@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/semantic.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/users.css" />
+  <script src="/assets/js/common.js"></script>
+  <script src="/assets/js/user.js"></script>
+  <title>User Management</title>
+</head>
+
+<body>
+  <!-- Image baner -->
+  <div class="ui center aligned header bg-gray">
+    <div class="ui small images">
+      <img class="ui image" src="../assets/images/banner-1.png" alt="banner-1" height="130px" />
+      <img class="ui image" src="../assets/images/banner-2.png" alt="banner-2" height="130px" />
+      <img class="ui image" src="../assets/images/banner-3.png" alt="banner-3" height="130px" />
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="ui main menu sticky">
+    <div class="ui container">
+      <div class="header item">
+        AMAS
+      </div>
+      <a id="home-menu" class="item" href="./home.html">Home</a>
+      <a id="resource-menu" class="item" href="./resource-list.html">Resources</a>
+      <a id="users-menu" class="item active" href="./user-list.html">Users</a>
+      <a id="about-menu" class="item" href="./about.html">About Us</a>
+      <a href="#" class="ui right floated dropdown item" tabindex="0">
+        <div id="user-name-menu">Dropdown</div> <i class="dropdown icon"></i>
+        <div class="menu" tabindex="-1">
+          <div class="item" id="edit-button">Edit profile</div>
+          <div class="item" id="logout-button">Logout</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="ui main container content">
+    <h2 class="ui header teal">Users
+      <div class="sub header">
+        Manage all system users
+      </div>
+    </h2>
+    <div class="ui divider"></div>
+
+    <!-- Search -->
+    <div class="ui secondary menu">
+      <div class="item" style="padding-left: 0; ">
+        <div class="ui icon input">
+          <input type="search" id="user-search-input" placeholder="Search user" />
+          <i class="search link icon"></i>
+        </div>
+      </div>
+      <div class="right menu">
+        <div class="item">
+          <a class="ui button teal" href="user-new.html">
+            Add new
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data list -->
+    <table class="ui selectable single line striped table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Role</th>
+          <th>Active</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="user-list">
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="6">
+            <div class="ui right floated pagination menu">
+              <div class="ui buttons">
+                <a id="first-page" class="ui icon button disabled active">
+                  <i class="left double angle icon"></i>
+                </a>
+                <a id="prev-page" class="ui icon button disabled active">
+                  <i class="left angle icon"></i>
+                </a>
+                <a class="ui button" id="current-page">
+                  1 of 10
+                </a>
+                <a id="next-page" class="ui icon button disabled active">
+                  <i class="right angle icon"></i>
+                </a>
+                <a id="last-page" class="ui icon button disabled active">
+                  <i class="right double angle icon"></i>
+                </a>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+
+</html>

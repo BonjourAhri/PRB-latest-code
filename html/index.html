@@ -1,0 +1,103 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <script>
+    $(function () {
+      $('#login-form')
+        .form({
+          fields: {
+            username: 'empty',
+            password: ['empty'],
+          }
+        })
+        .api({
+          url: BASE_URL + '/login',
+          method: 'POST',
+          beforeXHR: (xhr) => {
+            xhr.setRequestHeader('Content-Type', 'application/json');
+          },
+          beforeSend: (settings) => {
+            var fields = $(this).form('get values');
+            console.log(fields)
+            settings.data = JSON.stringify({
+              username: fields.username,
+              password: fields.password,
+            })
+            return settings
+          },
+          onSuccess: function (result) {
+            if (result.status !== 200) {
+              $(this).form('add errors', [result.data]);
+            } else {
+              localStorage.setItem("me", JSON.stringify(result.data));
+              window.location = "/home.html";
+            }
+          },
+          onFailure: function (error) {
+            $(this).form('add errors', [error.message]);
+          },
+        });
+    })
+  </script>
+  <title>Login</title>
+</head>
+
+<body>
+  <!-- Image baner -->
+  <div class="ui center aligned header bg-gray">
+    <div class="ui small images">
+      <img class="ui image" src="../assets/images/banner-1.png" alt="banner-1" height="130px" />
+      <img class="ui image" src="../assets/images/banner-2.png" alt="banner-2" height="130px" />
+      <img class="ui image" src="../assets/images/banner-3.png" alt="banner-3" height="130px" />
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="ui text container content">
+    <h2 class="ui header teal">Ancient Mediterranean Archeology System</h2>
+    <div class="ui divider"></div>
+
+    <div class="ui teal attached segment">
+      <div id="result-container" class="ui hidden message">
+        <div class="header">
+          An error has occured
+        </div>
+        <p id="result"></p>
+      </div>
+      <form class="ui form" id="login-form">
+        <div class="field">
+          <label for="username">Username</label>
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input id="username" type="text" name="username" placeholder="Username" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input id="password" type="password" name="password" placeholder="Enter password" required>
+          </div>
+        </div>
+        <!-- <div class="login-row" id="result">&nbsp;</div> -->
+        <!-- <button type="submit" class="ui fluid large teal submit button">Login</button> -->
+        <div class="ui teal fluid submit button">Submit</div>
+        <div class="ui error message"></div>
+      </form>
+
+    </div>
+    <div class="ui bottom attached message">
+      New to us? <a href="/register.html">Sign Up</a>
+    </div>
+  </div>
+</body>
+
+</html>
